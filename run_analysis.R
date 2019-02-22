@@ -32,3 +32,4 @@ data<-data[,-1]
 
 avg<-group_by(data,activity,subject)
 average<-summarize_all(avg,mean)
+write.table(average,file = "average.txt",row.names = FALSE)
